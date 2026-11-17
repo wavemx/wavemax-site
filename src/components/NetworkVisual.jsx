@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const NODE_COUNT = 46;
 const LINK_DISTANCE = 120;
 const POINTER_RADIUS = 160;
-const ACCENT = [61, 139, 255];
+const ACCENT = [3, 163, 203];
 const IDLE = [74, 80, 91];
 
 const makeNodes = (width, height) => {

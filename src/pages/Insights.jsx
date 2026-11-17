@@ -40,12 +40,12 @@ export const Insights = () => {
             {[[40, 40], [40, 80], [40, 120], [140, 30], [140, 65], [140, 100], [140, 135], [240, 60], [240, 100]].map(([x, y], i, all) => (
               <g key={i}>
                 {all.filter(([x2]) => x2 === x + 100).map(([x2, y2], j) => (
-                  <line key={j} x1={x} y1={y} x2={x2} y2={y2} stroke="#2F4A73" strokeWidth="1" />
+                  <line key={j} x1={x} y1={y} x2={x2} y2={y2} stroke="#1D4552" strokeWidth="1" />
                 ))}
               </g>
             ))}
             {[[40, 40], [40, 80], [40, 120], [140, 30], [140, 65], [140, 100], [140, 135], [240, 60], [240, 100]].map(([x, y], i) => (
-              <circle key={i} cx={x} cy={y} r="6" fill={i % 3 === 0 ? '#3D8BFF' : '#4A505B'} />
+              <circle key={i} cx={x} cy={y} r="6" fill={i % 3 === 0 ? '#03A3CB' : '#4A505B'} />
             ))}
           </svg>
         </div>

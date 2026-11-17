@@ -79,6 +79,8 @@ img, svg, canvas { display: block; }
 .site-header { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid var(--border); background: rgba(14, 16, 19, 0.88); backdrop-filter: blur(10px); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; }
 .wordmark { font-weight: 700; font-size: 21px; letter-spacing: 0.06em; }
+.brand { display: inline-flex; align-items: center; min-height: 44px; }
+.brand img, .footer-brand img { height: auto; }
 .nav-links { display: flex; align-items: center; gap: 28px; font-size: 15px; }
 .nav-links a:not(.btn) { color: var(--text-soft); transition: color 150ms ease; }
 .nav-links a:not(.btn):hover, .nav-links a.active { color: var(--accent); }
@@ -214,7 +216,7 @@ fieldset { margin: 0; padding: 0; border: 0; }
 .site-footer { border-top: 1px solid var(--border); background: var(--bg-deep); }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; padding-block: 48px; font-size: 14px; color: var(--muted); }
 .footer-brand, .footer-cols > div { display: flex; flex-direction: column; gap: 8px; }
-.footer-brand .wordmark { font-size: 18px; color: var(--text); }
+.footer-brand img { margin-bottom: 6px; }
 .footer-cols { display: flex; flex-wrap: wrap; gap: 56px; }
 .footer-head { color: var(--text); font-weight: 600; }
 .footer-cols a:hover { color: var(--accent); }

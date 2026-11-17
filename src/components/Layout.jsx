@@ -18,7 +18,9 @@ const Header = () => {
     <header className="site-header">
       <a className="skip-link" href="#main">Skip to content</a>
       <nav className="nav container" aria-label="Main">
-        <Link to="/" className="wordmark" onClick={close}>WAVEMAX</Link>
+        <Link to="/" className="brand" onClick={close}>
+          <img src="/brand/logo-reversed.svg" alt="WaveMax" width="176" height="25" />
+        </Link>
         <button
           type="button"
           className="nav-toggle"
@@ -46,7 +48,7 @@ const Footer = () => (
   <footer className="site-footer">
     <div className="container footer-grid">
       <div className="footer-brand">
-        <span className="wordmark">WAVEMAX</span>
+        <img src="/brand/logo-reversed.svg" alt="WaveMax" width="148" height="21" />
         <span>{site.location}</span>
         <span>© {new Date().getFullYear()} WaveMax</span>
       </div>

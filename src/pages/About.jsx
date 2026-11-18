@@ -28,7 +28,7 @@ export const About = () => (
         <p className="lead">
           I founded WaveMax to research brain-inspired AI for robots and autonomous systems, with a focus on
           cognitive architecture, memory, perception and simulation, and to help organizations apply AI well
-          along the way. Based on Long Island, New York.
+          along the way.
         </p>
       </div>
     </section>

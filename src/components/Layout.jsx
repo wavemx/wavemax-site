@@ -50,7 +50,6 @@ const Footer = () => (
     <div className="container footer-grid">
       <div className="footer-brand">
         <img src="/brand/logo-reversed.svg" alt="WaveMax" width="148" height="21" />
-        <span>{site.location}</span>
         <span>© {new Date().getFullYear()} WaveMax</span>
       </div>
       <div className="footer-cols">

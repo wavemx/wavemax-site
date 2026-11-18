@@ -3,7 +3,7 @@ export const routes = [
   {
     path: '/',
     title: 'WaveMax | Brain-inspired AI research for robotics and autonomous systems',
-    description: 'WaveMax researches brain-inspired AI for robots: cognitive architecture, associative memory, robot perception and simulation. Based on Long Island, New York.',
+    description: 'WaveMax researches brain-inspired AI for robots: cognitive architecture, associative memory, robot perception and simulation.',
     keywords: 'brain-inspired AI, AI research, robotics research, cognitive architecture, robot memory, associative memory, robot perception, robot simulation, sim-to-real, embodied AI, autonomous systems, artificial intelligence, cognitive AI, neuroscience-inspired AI, AI agents, WaveMax',
   },
   {
@@ -40,6 +40,6 @@ export const routes = [
     path: '/about',
     title: 'About and contact | WaveMax',
     description: 'About WaveMax founder Greg Gasowski, our approach to research and advisory, and how to get in touch about collaboration.',
-    keywords: 'WaveMax, Greg Gasowski, AI researcher, robotics research Long Island, AI research collaboration, contact WaveMax',
+    keywords: 'WaveMax, Greg Gasowski, AI researcher, robotics research, AI research collaboration, contact WaveMax',
   },
 ];

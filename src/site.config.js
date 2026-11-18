@@ -2,7 +2,6 @@
 export const site = {
   name: 'WaveMax',
   url: 'https://wavemax.ai',
-  location: 'Long Island, New York',
   // The contact address is kept encoded in src/components/ProtectedEmail.jsx, not here.
   // Formspree form ID (the part after formspree.io/f/). Enables the contact and newsletter forms.
   formspreeId: null,

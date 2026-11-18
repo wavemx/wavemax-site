@@ -1,3 +1,4 @@
+import { ContactLink } from '../components/ContactLink.jsx';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -33,11 +34,11 @@ export const Consulting = () => (
       <div className="container callout-row">
         <div>
           <h2 className="h3">Not sure where to start?</h2>
-          <p className="muted">Take the two-minute readiness check, or get in touch to scope an engagement.</p>
+          <p className="muted">Take the two-minute readiness check to see where your organization stands.</p>
         </div>
         <div className="actions">
           <Link className="btn btn-ghost" to="/readiness">Take the readiness check</Link>
-          <Link className="btn btn-primary" to="/about#contact">Get in touch</Link>
+          <ContactLink className="btn btn-primary">Get in touch</ContactLink>
         </div>
       </div>
     </section>

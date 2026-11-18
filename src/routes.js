@@ -38,8 +38,8 @@ export const routes = [
   },
   {
     path: '/about',
-    title: 'About and contact | WaveMax',
-    description: 'About WaveMax founder Greg Gasowski, our approach to research and advisory, and how to get in touch about collaboration.',
-    keywords: 'WaveMax, Greg Gasowski, AI researcher, robotics research, AI research collaboration, contact WaveMax',
+    title: 'About WaveMax | Brain-inspired AI research company',
+    description: 'Why WaveMax was founded, its mission and vision, and how it approaches brain-inspired AI research for robots and applied AI advisory.',
+    keywords: 'about WaveMax, AI research company, brain-inspired AI company, robotics research company, AI mission, autonomous systems research',
   },
 ];

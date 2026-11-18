@@ -1,3 +1,4 @@
+import { ContactLink } from '../components/ContactLink.jsx';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { site } from '../site.config.js';
@@ -115,7 +116,7 @@ export const Robotics = () => (
           <h2 className="h3">Research partners and funders</h2>
           <p className="muted">We welcome conversations with research institutions, investors and grant programs interested in this work.</p>
         </div>
-        <Link className="btn btn-primary" to="/about#contact">Start a conversation</Link>
+        <ContactLink className="btn btn-primary" fallback={{ to: '/research', label: 'Explore our research' }}>Start a conversation</ContactLink>
       </div>
     </section>
   </>

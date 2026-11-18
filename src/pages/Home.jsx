@@ -1,3 +1,4 @@
+import { ContactLink } from '../components/ContactLink.jsx';
 import { Link } from 'react-router-dom';
 import { NetworkVisual } from '../components/NetworkVisual.jsx';
 import { researchAreas } from '../research.js';
@@ -15,7 +16,7 @@ export const Home = () => (
         </p>
         <div className="actions">
           <Link className="btn btn-primary" to="/research">Explore our research</Link>
-          <Link className="btn btn-ghost" to="/about#contact">Discuss a collaboration</Link>
+          <ContactLink className="btn btn-ghost" fallback={{ to: '/robotics', label: 'See applications' }}>Discuss a collaboration</ContactLink>
         </div>
       </div>
       <NetworkVisual />
@@ -95,7 +96,7 @@ export const Home = () => (
         <p className="sub center">
           We welcome conversations with research institutions, robotics teams, investors and grant programs.
         </p>
-        <Link className="btn btn-primary" to="/about#contact">Start a conversation</Link>
+        <ContactLink className="btn btn-primary" fallback={{ to: '/research', label: 'Explore our research' }}>Start a conversation</ContactLink>
       </div>
     </section>
   </>

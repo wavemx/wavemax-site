@@ -1,3 +1,4 @@
+import { ContactLink } from '../components/ContactLink.jsx';
 import { Link } from 'react-router-dom';
 import { researchAreas } from '../research.js';
 import { site } from '../site.config.js';
@@ -92,7 +93,7 @@ export const Research = () => (
         </div>
         <div className="actions">
           <Link className="btn btn-ghost" to="/robotics">See applications</Link>
-          <Link className="btn btn-primary" to="/about#contact">Start a conversation</Link>
+          <ContactLink className="btn btn-primary">Start a conversation</ContactLink>
         </div>
       </div>
     </section>

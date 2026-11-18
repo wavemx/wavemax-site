@@ -1,3 +1,4 @@
+import { ContactLink } from '../components/ContactLink.jsx';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -47,7 +48,7 @@ const Result = ({ answers, onRestart }) => {
       <p className="strong">Suggested first step</p>
       <p className="muted">{band.step}</p>
       <div className="actions">
-        <Link className="btn btn-primary" to="/about#contact">Discuss your results</Link>
+        <ContactLink className="btn btn-primary">Discuss your results</ContactLink>
         <button type="button" className="btn btn-ghost" onClick={onRestart}>Start over</button>
       </div>
     </div>

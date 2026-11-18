@@ -1,3 +1,4 @@
+import { ContactLink } from './ContactLink.jsx';
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { site } from '../site.config.js';
@@ -38,7 +39,7 @@ const Header = () => {
           {navItems.map((item) => (
             <NavLink key={item.to} to={item.to} onClick={close}>{item.label}</NavLink>
           ))}
-          <Link className="btn btn-primary btn-sm" to="/about#contact" onClick={close}>Contact</Link>
+          <ContactLink className="btn btn-primary btn-sm" onClick={close}>Contact</ContactLink>
         </div>
       </nav>
     </header>
@@ -64,7 +65,7 @@ const Footer = () => (
           <span className="footer-head">Company</span>
           <Link to="/insights">Insights</Link>
           <Link to="/about">About</Link>
-          <Link to="/about#contact">Contact</Link>
+          <ContactLink>Contact</ContactLink>
         </div>
         <div>
           <span className="footer-head">Connect</span>

@@ -17,7 +17,6 @@ const orgSchema = {
   url: site.url,
   logo: `${site.url}/brand/wavemax-logo.svg`,
   description: 'Brain-inspired AI research for robotics and autonomous systems: cognitive architecture, memory, perception and simulation.',
-  founder: { '@type': 'Person', name: 'Greg Gasowski' },
   knowsAbout: ['Brain-inspired AI', 'Cognitive architecture', 'Robot memory', 'Robot perception', 'Robot simulation', 'Embodied AI', 'AI governance'],
   sameAs: [site.githubUrl],
 };

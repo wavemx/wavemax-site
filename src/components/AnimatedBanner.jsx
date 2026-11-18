@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-/* Animated network drawn over a background photo.
+/* Animated network on the page background.
    Ported from the network background designed and created by Gregory Gasowski
    (https://gregorygasowski.github.io): drifting nodes, proximity links, soft glows, cursor attraction.
    Scoped here to its container instead of the whole window. */

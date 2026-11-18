@@ -249,12 +249,8 @@ fieldset { margin: 0; padding: 0; border: 0; }
 /* Email reveal */
 .email-reveal { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 
-/* About banner: photo with the animated network on top */
-.anim-banner { position: relative; overflow: hidden; min-height: 460px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--border);
-  background-color: var(--bg);
-  background-image: linear-gradient(180deg, rgba(14, 16, 19, 0.55) 0%, rgba(14, 16, 19, 0.78) 60%, rgba(14, 16, 19, 0.96) 100%), url('/images/about-banner.jpg');
-  background-image: linear-gradient(180deg, rgba(14, 16, 19, 0.55) 0%, rgba(14, 16, 19, 0.78) 60%, rgba(14, 16, 19, 0.96) 100%), image-set(url('/images/about-banner.webp') type('image/webp'), url('/images/about-banner.jpg') type('image/jpeg'));
-  background-size: cover; background-position: center 35%; }
+/* About banner: animated network on plain charcoal */
+.anim-banner { position: relative; overflow: hidden; min-height: 460px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--border); background: var(--bg); }
 .anim-banner canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .anim-banner-content { position: relative; z-index: 1; width: 100%; padding-block: 120px 64px; }
 .anim-banner .lead { color: var(--text-soft); }

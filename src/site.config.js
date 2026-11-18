@@ -11,5 +11,5 @@ export const site = {
   bookingUrl: null,
   linkedinUrl: null,
   githubUrl: 'https://github.com/wavemx',
-  demoUrl: 'https://gregorygasowski.github.io/',
+  demoUrl: '/demo/neural-network/',
 };

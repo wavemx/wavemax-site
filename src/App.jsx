@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout.jsx';
 import { Home } from './pages/Home.jsx';
 import { Consulting } from './pages/Consulting.jsx';
+import { Research } from './pages/Research.jsx';
 import { Robotics } from './pages/Robotics.jsx';
 import { Insights } from './pages/Insights.jsx';
 import { Readiness } from './pages/Readiness.jsx';
@@ -30,6 +31,7 @@ export const App = () => {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/research" element={<Research />} />
         <Route path="/consulting" element={<Consulting />} />
         <Route path="/robotics" element={<Robotics />} />
         <Route path="/insights" element={<Insights />} />

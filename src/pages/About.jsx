@@ -2,7 +2,7 @@ import { ContactForm } from '../components/ContactForm.jsx';
 import { site } from '../site.config.js';
 
 const principles = [
-  { name: 'Business outcome first', text: 'Every recommendation ties back to time, cost, risk or revenue.' },
+  { name: 'Research with a purpose', text: 'Every research question is tied to something a real robot or organization needs to do.' },
   { name: 'Architecture, not tools', text: 'AI has to fit your systems and data, so we design for that from the start.' },
   { name: 'Governed by default', text: 'Clear policy and controls let teams move faster, not slower.' },
   { name: 'Measured honestly', text: 'Pilots have success criteria agreed up front, and we report what we find.' },
@@ -26,8 +26,9 @@ export const About = () => (
           recently I have led enterprise AI adoption, including AI agents and the governance policy behind them.
         </p>
         <p className="lead">
-          WaveMax brings that experience to organizations ready to make AI real, and gives me a home for research
-          in robotics and autonomous intelligence. Based on Long Island, New York.
+          I founded WaveMax to research brain-inspired AI for robots and autonomous systems, with a focus on
+          cognitive architecture, memory, perception and simulation, and to help organizations apply AI well
+          along the way. Based on Long Island, New York.
         </p>
       </div>
     </section>
@@ -47,9 +48,9 @@ export const About = () => (
     </section>
 
     <section id="contact" className="container section" aria-labelledby="contact-h">
-      <h2 id="contact-h" className="h2">Discuss your project</h2>
+      <h2 id="contact-h" className="h2">Get in touch</h2>
       <p className="sub">
-        {site.bookingUrl ? 'Book a 30-minute call, or send a note' : 'Send a note'} and I'll reply within two business days.
+        Research collaborations, funding, robotics projects or advisory work: {site.bookingUrl ? 'book a call or send a note' : 'send a note'} and we will reply within two business days.
       </p>
       <div className="contact-grid">
         {site.bookingUrl && (

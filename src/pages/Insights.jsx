@@ -6,6 +6,10 @@ import { site } from '../site.config.js';
 const items = [
   { kind: 'Demo', topic: 'Neural networks', title: 'Live neural network training', body: 'A real-time browser visualization of a network learning.', href: site.demoUrl, meta: 'Interactive' },
   { kind: 'Tool', topic: 'Readiness', title: 'AI readiness check', body: 'Six questions that score your organization and suggest a first step.', to: '/readiness', meta: 'About 2 minutes' },
+  { kind: 'Research', topic: 'Memory', title: 'Why robots need memory', body: 'Our main direction: brain-inspired associative memory for autonomous agents.', to: '/research#memory', meta: 'Research area' },
+  { kind: 'Research', topic: 'Cognition', title: 'Brain-inspired cognitive architecture', body: 'How perception, memory, attention and planning can work together in one system.', to: '/research#cognitive-architecture', meta: 'Research area' },
+  { kind: 'Research', topic: 'Perception', title: 'Perception for robots', body: 'Fusing vision, depth, touch and sound into a shared picture of the world.', to: '/research#perception', meta: 'Research area' },
+  { kind: 'Research', topic: 'Simulation', title: 'Closing the sim-to-real gap', body: 'Training and testing robots in simulated worlds and digital twins.', to: '/research#simulation', meta: 'Research area' },
   { kind: 'Perspective', topic: 'Robotics', title: 'Where autonomy earns trust first', body: 'Why inspection, logistics and facilities lead the move to physical AI.', to: '/robotics', meta: 'Short read' },
 ];
 
@@ -32,7 +36,7 @@ export const Insights = () => {
   return (
     <section className="container page-head">
       <h1 className="display-sm">Insights and projects</h1>
-      <p className="lead">Articles, working demonstrations and documented outcomes. Practical, with no hype.</p>
+      <p className="lead">Research notes, working demonstrations and projects in brain-inspired AI and robotics.</p>
 
       <a className="feature card-link" href={site.demoUrl}>
         <div className="feature-art" aria-hidden="true">

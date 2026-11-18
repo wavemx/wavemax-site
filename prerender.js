@@ -10,21 +10,38 @@ const clientDir = path.join(root, 'dist/client');
 const template = fs.readFileSync(path.join(clientDir, 'index.html'), 'utf-8');
 const { render } = await import(path.join(root, 'dist/server/entry-server.js'));
 
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'WaveMax',
+  url: site.url,
+  logo: `${site.url}/brand/wavemax-logo.svg`,
+  description: 'Brain-inspired AI research for robotics and autonomous systems: cognitive architecture, memory, perception and simulation.',
+  founder: { '@type': 'Person', name: 'Greg Gasowski' },
+  address: { '@type': 'PostalAddress', addressRegion: 'NY', addressCountry: 'US' },
+  knowsAbout: ['Brain-inspired AI', 'Cognitive architecture', 'Robot memory', 'Robot perception', 'Robot simulation', 'Embodied AI', 'AI governance'],
+  sameAs: [site.githubUrl],
+};
+
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
-const headFor = ({ path: p, title, description }) => {
+const headFor = ({ path: p, title, description, keywords }) => {
   const url = site.url + (p === '/' ? '/' : p);
   return [
     `<title>${escape(title)}</title>`,
     `<meta name="description" content="${escape(description)}" />`,
+    keywords ? `<meta name="keywords" content="${escape(keywords)}" />` : '',
+    `<meta name="robots" content="index, follow" />`,
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:type" content="website" />`,
     `<meta property="og:site_name" content="WaveMax" />`,
     `<meta property="og:title" content="${escape(title)}" />`,
     `<meta property="og:description" content="${escape(description)}" />`,
     `<meta property="og:url" content="${url}" />`,
+    `<meta property="og:image" content="${site.url}/brand/wavemax-logo.svg" />`,
     `<meta name="twitter:card" content="summary" />`,
-  ].join('\n    ');
+    p === '/' ? `<script type="application/ld+json">${JSON.stringify(orgSchema)}</script>` : '',
+  ].filter(Boolean).join('\n    ');
 };
 
 const writePage = (route, file) => {

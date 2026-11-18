@@ -3,9 +3,10 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { site } from '../site.config.js';
 
 const navItems = [
-  { to: '/consulting', label: 'AI consulting' },
+  { to: '/research', label: 'Research' },
   { to: '/robotics', label: 'Robotics' },
   { to: '/insights', label: 'Insights' },
+  { to: '/consulting', label: 'Advisory' },
   { to: '/about', label: 'About' },
 ];
 
@@ -37,7 +38,7 @@ const Header = () => {
           {navItems.map((item) => (
             <NavLink key={item.to} to={item.to} onClick={close}>{item.label}</NavLink>
           ))}
-          <Link className="btn btn-primary btn-sm" to="/about#contact" onClick={close}>Discuss your project</Link>
+          <Link className="btn btn-primary btn-sm" to="/about#contact" onClick={close}>Contact</Link>
         </div>
       </nav>
     </header>
@@ -55,8 +56,9 @@ const Footer = () => (
       <div className="footer-cols">
         <div>
           <span className="footer-head">Work</span>
-          <Link to="/consulting">AI consulting</Link>
+          <Link to="/research">Research</Link>
           <Link to="/robotics">Robotics</Link>
+          <Link to="/consulting">Advisory</Link>
           <Link to="/readiness">Readiness check</Link>
         </div>
         <div>

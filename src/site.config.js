@@ -3,8 +3,7 @@ export const site = {
   name: 'WaveMax',
   url: 'https://wavemax.ai',
   location: 'Long Island, New York',
-  // Public contact address shown on the site. Leave null to hide it.
-  contactEmail: null,
+  // The contact address is kept encoded in src/components/ProtectedEmail.jsx, not here.
   // Formspree form ID (the part after formspree.io/f/). Enables the contact and newsletter forms.
   formspreeId: null,
   // Scheduling link, e.g. https://cal.com/yourname/30min. Shows a "Book a call" button.

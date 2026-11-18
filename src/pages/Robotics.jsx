@@ -53,13 +53,13 @@ export const Robotics = () => (
       <div className="grid grid-2">
         <div className="card card-accent">
           <p className="strong accent">What we explore</p>
-          <p className="muted">Research direction, prototypes and point-of-view writing on autonomous systems and robot intelligence.</p>
+          <p className="muted">Brain-inspired cognition, memory, perception and simulation for robots. <Link className="inline-link" to="/research">See our research</Link>.</p>
         </div>
         <div className="card">
           <p className="strong">What we deliver today</p>
           <p className="muted">
             Advisory on robotics readiness and pilot planning, as part of our{' '}
-            <Link className="inline-link" to="/consulting">AI consulting</Link> work. We don't sell or build robots.
+            <Link className="inline-link" to="/consulting">applied AI advisory</Link>. We don't sell or build robots.
           </p>
         </div>
       </div>
@@ -98,6 +98,7 @@ export const Robotics = () => (
           <span className="meta">Research · In progress</span>
           <h3 className="card-title-lg">Associative memory for autonomous agents</h3>
           <p className="muted">A brain-inspired approach to how agents store and connect knowledge. Details will follow publication.</p>
+          <Link className="more" to="/research#memory">About this research →</Link>
         </div>
         <a className="card card-link" href={site.demoUrl}>
           <span className="meta">Demo · Live</span>

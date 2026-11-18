@@ -1,6 +1,5 @@
 /*
-  Live neural network training animation.
-  Designed and created by Gregory Gasowski (https://gregorygasowski.github.io).
+  Live neural network training animation. WaveMax.
   Architecture: 2 inputs -> 10 hidden layers x 5 ReLU neurons -> 1 linear output.
   Each cycle trains on real data and animates the four steps:
     1. Forward propagation   z = sum(a_i * w_i) + b,  a = ReLU(z) = max(0, z)

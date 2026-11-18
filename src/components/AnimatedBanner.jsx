@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 /* Animated network on the page background.
-   Ported from the network background designed and created by Gregory Gasowski
-   (https://gregorygasowski.github.io): drifting nodes, proximity links, soft glows, cursor attraction.
+   Drifting nodes, proximity links, soft glows and cursor attraction.
    Scoped here to its container instead of the whole window. */
 const COLORS = ['56,220,205', '3,163,203', '200,220,240'];
 const LINK = 170;

@@ -14,6 +14,34 @@ const cases = [
 
 const filters = ['All', 'Facilities', 'Logistics', 'Manufacturing', 'Healthcare', 'Field operations'];
 
+// Research projects. Status labels stay honest: these are directions being explored, not finished results.
+const projects = [
+  {
+    status: 'Research · Exploration',
+    title: 'Fully autonomous robots',
+    body: 'Robots that plan, act and recover from mistakes on their own, without a remote operator, using memory of past runs to handle situations they have not seen before.',
+    focus: ['Long-horizon planning', 'Failure recovery', 'Learning from past runs'],
+  },
+  {
+    status: 'Research · Exploration',
+    title: 'Self-aware robots',
+    body: 'Robots that build a model of themselves: their own body, sensors, limits and condition. A robot that knows its own state can notice a failing motor, adapt to damage and tell an operator when a task is beyond it.',
+    focus: ['Robot self-modeling', 'Fault and damage awareness', 'Knowing its own limits'],
+  },
+  {
+    status: 'Research · Open question',
+    title: 'Machine self-reflection',
+    body: 'Can a machine think about its own thinking? We study metacognition, a key ingredient of human self-awareness: knowing what you know, recognizing uncertainty and questioning your own decisions before acting.',
+    focus: ['Metacognition', 'Uncertainty awareness', 'Self-explanation'],
+  },
+  {
+    status: 'Research · Exploration',
+    title: 'Network-aware robot teams',
+    body: 'Robots that are aware of one another and of the network they share. They exchange what they perceive and remember, so one robot’s experience benefits the whole fleet, and they keep working safely when the connection drops.',
+    focus: ['Multi-robot coordination', 'Shared fleet memory', 'Edge and cloud awareness'],
+  },
+];
+
 const Gallery = () => {
   const [filter, setFilter] = useState('All');
   const shown = filter === 'All' ? cases : cases.filter((c) => c.tag === filter);
@@ -94,7 +122,21 @@ export const Robotics = () => (
 
     <section className="container section-tight" aria-labelledby="proj">
       <h2 id="proj" className="h2">Projects</h2>
+      <p className="sub">
+        Our robotics research asks what it takes for machines to act on their own, understand themselves and work
+        as a connected team.
+      </p>
       <div className="grid grid-2">
+        {projects.map((p) => (
+          <article key={p.title} className="card">
+            <span className="meta">{p.status}</span>
+            <h3 className="card-title-lg">{p.title}</h3>
+            <p className="muted">{p.body}</p>
+            <ul className="tags" aria-label="Focus areas">
+              {p.focus.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+          </article>
+        ))}
         <div className="card">
           <span className="meta">Research · In progress</span>
           <h3 className="card-title-lg">Associative memory for autonomous agents</h3>

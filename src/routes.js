@@ -15,8 +15,8 @@ export const routes = [
   {
     path: '/robotics',
     title: 'Robotics and autonomous intelligence | WaveMax',
-    description: 'Where autonomous robots are showing up first: facilities inspection, logistics, manufacturing, healthcare and field operations, and how memory and perception research applies.',
-    keywords: 'robotics, autonomous robots, autonomous intelligence, physical AI, inspection robots, warehouse robotics, facilities robotics, legged robots, robot applications, human-robot coordination',
+    description: 'Robotics research at WaveMax: fully autonomous robots, self-aware robots that model their own state, machine self-reflection, and network-aware robot teams, plus where autonomy is showing up first.',
+    keywords: 'robotics, autonomous robots, autonomous intelligence, self-aware robots, robot self-modeling, machine self-awareness, metacognition, networked robots, multi-robot systems, robot fleet learning, swarm robotics, physical AI, inspection robots, warehouse robotics, legged robots, human-robot coordination',
   },
   {
     path: '/insights',

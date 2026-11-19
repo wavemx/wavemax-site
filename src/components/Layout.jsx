@@ -67,11 +67,12 @@ const Footer = () => (
           <Link to="/about">About</Link>
           <ContactLink>Contact</ContactLink>
         </div>
-        <div>
-          <span className="footer-head">Connect</span>
-          <a href={site.githubUrl}>GitHub</a>
-          {site.linkedinUrl && <a href={site.linkedinUrl}>LinkedIn</a>}
-        </div>
+        {site.linkedinUrl && (
+          <div>
+            <span className="footer-head">Connect</span>
+            <a href={site.linkedinUrl}>LinkedIn</a>
+          </div>
+        )}
       </div>
     </div>
   </footer>

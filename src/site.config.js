@@ -10,6 +10,5 @@ export const site = {
   // Scheduling link, e.g. https://cal.com/yourname/30min. Shows a "Book a call" button.
   bookingUrl: null,
   linkedinUrl: null,
-  githubUrl: 'https://github.com/wavemx',
   demoUrl: '/demo/neural-network/',
 };

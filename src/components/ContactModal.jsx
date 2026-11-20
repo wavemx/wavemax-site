@@ -30,12 +30,22 @@ const sendMessage = async (form) => {
     headers: { Accept: 'application/json' },
     body: new FormData(form),
   });
-  if (!res.ok) throw new Error(`Form error ${res.status}`);
+  if (res.ok) return;
+  // Surface Formspree's own explanation (for example a CAPTCHA, domain or verification setting).
+  let reason = '';
+  try {
+    const data = await res.json();
+    reason = data.errors?.map((e) => e.message).join(' ') || data.error || '';
+  } catch {
+    reason = '';
+  }
+  throw new Error(reason || `The form service returned an error (${res.status}).`);
 };
 
 const ContactDialog = ({ dialogRef, onClose }) => {
   const [status, setStatus] = useState('idle');
   const [length, setLength] = useState(0);
+  const [errorText, setErrorText] = useState('');
 
   const submit = async (e) => {
     e.preventDefault();
@@ -47,7 +57,12 @@ const ContactDialog = ({ dialogRef, onClose }) => {
       setLength(0);
       setStatus('sent');
     } catch (err) {
-      setStatus(err.message === 'not-configured' ? 'not-configured' : 'error');
+      if (err.message === 'not-configured') {
+        setStatus('not-configured');
+        return;
+      }
+      setErrorText(err instanceof TypeError ? 'The message could not reach the form service. Check your connection and try again.' : err.message);
+      setStatus('error');
     }
   };
 
@@ -110,7 +125,7 @@ const ContactDialog = ({ dialogRef, onClose }) => {
             <p className="contact-note">
               We will reply to the email address you enter above. <span className="contact-count">{length}/{MAX_MESSAGE}</span>
             </p>
-            {status === 'error' && <p className="error" role="alert">Something went wrong. Please try again in a moment.</p>}
+            {status === 'error' && <p className="error" role="alert">Message not sent: {errorText}</p>}
             {status === 'not-configured' && <p className="error" role="alert">Messaging isn’t connected yet. Please try again soon.</p>}
             <button type="submit" className="btn btn-primary contact-send" disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending…' : 'Send message'}

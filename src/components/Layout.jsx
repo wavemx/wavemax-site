@@ -1,4 +1,5 @@
 import { ContactLink } from './ContactLink.jsx';
+import { ContactModalProvider } from './ContactModal.jsx';
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { site } from '../site.config.js';
@@ -65,7 +66,7 @@ const Footer = () => (
           <span className="footer-head">Company</span>
           <Link to="/insights">Insights</Link>
           <Link to="/about">About</Link>
-          <ContactLink>Contact</ContactLink>
+          <ContactLink placement="footer">Contact</ContactLink>
         </div>
         {site.linkedinUrl && (
           <div>
@@ -79,9 +80,9 @@ const Footer = () => (
 );
 
 export const Layout = ({ children }) => (
-  <>
+  <ContactModalProvider>
     <Header />
     <main id="main">{children}</main>
     <Footer />
-  </>
+  </ContactModalProvider>
 );

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { AnimatedBanner } from '../components/AnimatedBanner.jsx';
-import { ContactForm } from '../components/ContactForm.jsx';
+import { ContactLink } from '../components/ContactLink.jsx';
 import { site } from '../site.config.js';
 
 const principles = [
@@ -101,22 +101,14 @@ export const About = () => (
       </div>
     </section>
 
-    {site.showContact && (
+    {site.showContact && !site.contactFooterOnly && (
       <section id="contact" className="container section" aria-labelledby="contact-h">
-        <h2 id="contact-h" className="h2">Get in touch</h2>
-        <p className="sub">
-          Research collaborations, funding, robotics projects or advisory work: send a note and we will reply within
-          two business days.
-        </p>
-        <div className="contact-grid">
-          {site.bookingUrl && (
-            <div className="card card-accent">
-              <h3 className="card-title-lg">Book a consultation</h3>
-              <p className="muted">Pick a time that works for you.</p>
-              <a className="btn btn-primary" href={site.bookingUrl}>Book a call</a>
-            </div>
-          )}
-          <ContactForm />
+        <div className="callout">
+          <div>
+            <h2 id="contact-h" className="h3">Get in touch</h2>
+            <p className="muted">Research collaborations, funding, robotics projects or advisory work. We reply within two business days.</p>
+          </div>
+          <ContactLink className="btn btn-primary">Contact us</ContactLink>
         </div>
       </section>
     )}

@@ -283,3 +283,8 @@ fieldset { margin: 0; padding: 0; border: 0; }
 .contact-send { width: 100%; }
 .contact-done { display: flex; flex-direction: column; gap: 10px; }
 @media (prefers-reduced-motion: reduce) { .contact-dialog[open] { animation: none; } }
+
+/* Footer link icons */
+.footer-cols a, .footer-cols .link-btn { display: inline-flex; align-items: center; gap: 9px; }
+.footer-icon { flex: none; color: var(--faint); transition: color 150ms ease; }
+.footer-cols a:hover .footer-icon, .footer-cols .link-btn:hover .footer-icon { color: var(--accent); }

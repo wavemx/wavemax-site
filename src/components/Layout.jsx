@@ -1,5 +1,15 @@
 import { ContactLink } from './ContactLink.jsx';
 import { ContactModalProvider } from './ContactModal.jsx';
+import {
+  AboutIcon,
+  AdvisoryIcon,
+  ContactIcon,
+  InsightsIcon,
+  LinkedInIcon,
+  ReadinessIcon,
+  ResearchIcon,
+  RoboticsIcon,
+} from './FooterIcons.jsx';
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { site } from '../site.config.js';
@@ -57,21 +67,21 @@ const Footer = () => (
       <div className="footer-cols">
         <div>
           <span className="footer-head">Work</span>
-          <Link to="/research">Research</Link>
-          <Link to="/robotics">Robotics</Link>
-          <Link to="/consulting">Advisory</Link>
-          <Link to="/readiness">Readiness check</Link>
+          <Link to="/research"><ResearchIcon />Research</Link>
+          <Link to="/robotics"><RoboticsIcon />Robotics</Link>
+          <Link to="/consulting"><AdvisoryIcon />Advisory</Link>
+          <Link to="/readiness"><ReadinessIcon />Readiness check</Link>
         </div>
         <div>
           <span className="footer-head">Company</span>
-          <Link to="/insights">Insights</Link>
-          <Link to="/about">About</Link>
-          <ContactLink placement="footer">Contact</ContactLink>
+          <Link to="/insights"><InsightsIcon />Insights</Link>
+          <Link to="/about"><AboutIcon />About</Link>
+          <ContactLink placement="footer"><ContactIcon />Contact</ContactLink>
         </div>
         {site.linkedinUrl && (
           <div>
             <span className="footer-head">Connect</span>
-            <a href={site.linkedinUrl}>LinkedIn</a>
+            <a href={site.linkedinUrl}><LinkedInIcon />LinkedIn</a>
           </div>
         )}
       </div>
